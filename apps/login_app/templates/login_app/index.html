@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Login/Registration</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}"media="screen" title="no title"  charset="utf-8">
+    </head>
+    <body>
+        <h1>Welcome!</h1>
+        <div id = "wrapper">
+            {% for message in messages %}
+                <div id="error">
+                    <p>{{message}}</p>
+                </div>
+            {% endfor %}
+            <div id="register">
+                <fieldset>
+                <legend>Register</legend>
+                <form action="/register" method="POST">
+                    {% csrf_token %}
+                    <label for ="name">Name: <input type="text" name="name" id="name"></label>
+                    <label for ="email">Email: <input type="text" name="email" id="email"></label>
+                    <label for ="password">Password: <input type="password" name="password" id="password"></label>
+                    <p>*Password should be at least 8 characters </p>
+                    <label for ="confirm_password">Confirm PW: <input type="password" name="confirm_password" id="confirm_password"></label>
+                    <label for ="birthday">Date of Birth: <input type="date" name="birthday" id="birthday"></label>
+                    <input type="submit" value="Register" id="register-submit">
+                </form>
+                </fieldset>
+            </div>
+            <div id="login">
+                <fieldset>
+                <legend>Login</legend>
+                <form action="/login" method="POST">
+                    {% csrf_token %}
+                    <label for ="email">Email Address: <input type="text" name="email" id="login-email"></label>
+                    <label for ="password">Password: <input type="password" name="password" id="login-password"></label>
+                    <input type="submit" value="Submit" id="login-submit">
+                </form>
+                </fieldset>
+            </div>
+        </div>
+    </body>
+</html>

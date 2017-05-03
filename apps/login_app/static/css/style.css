@@ -1,0 +1,80 @@
+* {
+    font-family: Arial, sans-serif;
+}
+
+legend {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#register {
+    display: inline-block;
+}
+
+#register p {
+    text-align: right;
+}
+
+#login {
+    display: inline-block;
+    vertical-align: top;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+form {
+    width: 400px;
+}
+
+#register-submit {
+    border: 2px solid black;
+    background-color: white;
+    padding: 5px 10px;
+    margin-left: 333px;
+}
+
+
+#login-submit {
+    border: 2px solid black;
+    background-color: white;
+    padding: 5px 10px;
+    margin-left: 333px;
+}
+
+.success h2 {
+    color: green;
+}
+
+#appointments-top h1 {
+    display: inline;
+}
+
+#appointments-top a {
+    float: right;
+    margin-right: 50px;
+    font-size: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+#dashboard-top a {
+    display: inline;
+}
